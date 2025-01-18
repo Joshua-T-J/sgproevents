@@ -1,0 +1,32 @@
+<section class="services page-container-section">
+    <div class="container-fluid">
+        <app-page-hero [title]="title" [description]="description" [className]="'services-hero'"></app-page-hero>
+        <div class="service-details-section">
+            @for (item of services; track item.id; let i = $index; let even = $even) {
+            <div class="service-container" [ngClass]="{'left-card-right-img': even, 'right-card-left-img': !even}">
+                <div class="service-img" [style.backgroundImage]="'url(' + item.image + ')'"></div>
+                <div class="service-card">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-divider">
+                            <span class="elementor-divider-separator"> </span>
+                        </div>
+                    </div>
+                    <div class="card-inner">
+                        <div class="card-title">
+                            <h4 class="cormorant-garamond-bold">{{ item.title }}</h4>
+                        </div>
+                        <div class="card-text">
+                            <p class="montserrat-regular">{{ item.description }}</p>
+                        </div>
+                        <button class="book-now-btn light-bg" routerLink="/contact" [queryParams]="{service:item.title}">
+                            Book Now <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            }
+
+
+        </div>
+    </div>
+</section>

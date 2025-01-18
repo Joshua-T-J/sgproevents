@@ -1,0 +1,235 @@
+// .service-container {
+//     width: 100%;
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     min-height: 65vh;
+//     position: relative;
+//     .service-img {
+//         background-image: url(https://websitedemos.net/wedding-organizer-04/wp-content/uploads/sites/454/2021/03/couple-on-beach.jpg);
+//         background-position: center center;
+//         background-size: cover;
+//     }
+//     .service-card {
+//         position: absolute;
+//         max-width: 50%;
+//         right: 0;
+//         display: flex;
+//         margin-inline-end: 120px;
+//         background: var(--clr-white);
+//         // margin-block: 100px;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         .elementor-widget-container {
+//             width: 30%;
+//             display: flex;
+//             padding-block: 70px;
+//             padding-inline-start: 70px;
+//             justify-content: flex-end;
+//             .elementor-divider {
+//                 height: 10px;
+//                 width: auto;
+//             }
+//             .elementor-divider-separator {
+//                 height: 2px;
+//                 background: #000;
+//                 width: 70px;
+//                 display: inline-block;
+//             }
+//         }
+//         // background: #cc2525af;
+//         .card-inner {
+//             height: 100%;
+//             display: grid;
+//             align-items: center;
+//             padding-inline: 60px 100px;
+//             padding-block: 70px;
+//         }
+//         .card-title h4 {
+//             font-size: 3rem;
+//             font-weight: 400;
+//             font-family: 'Cardo', serif;
+//             line-height: 1.3em;
+//         }
+//         .book-now-btn {
+//             max-width: fit-content;
+//         }
+//         .card-text p {
+//             line-height: 2rem;
+//         }
+//     }
+// }
+// .left-card-right-img .service-card {
+//     grid-column: 1 / 3;
+//     /* Adjusting to ensure proper layout */
+// }
+// .left-card-right-img .service-img {
+//     grid-column: 1 / 2;
+//     /* Adjusting to ensure proper layout */
+// }
+// .right-card-left-img .service-card {
+//     grid-column: 1 / 2;
+// }
+// .right-card-left-img .service-img {
+//     grid-column: 2/3;
+// }
+.service-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 500px;
+    max-height: min(65vh, 500px);
+    position: relative;
+}
+
+.service-img {
+    background-position: center center;
+    background-size: cover;
+}
+
+.service-card {
+    position: absolute;
+    display: flex;
+    background: var(--clr-white);
+    top: 50%;
+    width: 100vw;
+    transform: translateY(-50%);
+}
+
+@media screen and (width > 768px) {
+    .left-card-right-img .service-card {
+        right: 0;
+        margin-inline-end: 100px;
+        grid-column: 1 / 3;
+    }
+
+    .left-card-right-img .service-img {
+        grid-column: 1 / 2;
+    }
+
+    .right-card-left-img .service-card {
+        left: 0;
+        margin-inline-start: 100px;
+        grid-column: 1 / 3;
+    }
+
+    .right-card-left-img .service-img {
+        grid-column: 2/3;
+    }
+
+    .service-card {
+        max-width: 50%;
+    }
+}
+
+.elementor-widget-container {
+    width: 30%;
+    display: flex;
+    padding-block: 70px;
+    padding-inline-start: 25px;
+    justify-content: flex-end;
+}
+
+.elementor-divider {
+    height: 10px;
+    width: auto;
+}
+
+.elementor-divider-separator {
+    height: 2px;
+    background: #000;
+    width: 70px;
+    display: inline-block;
+}
+
+.card-inner {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    padding-inline: 60px 100px;
+    padding-block: 70px;
+}
+
+.card-title h4 {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Cardo', serif;
+    line-height: 1.3em;
+}
+
+.book-now-btn {
+    max-width: fit-content;
+    color: var(--clr-primary);
+
+    &::before {
+        border-color: var(--clr-primary);
+    }
+}
+
+.card-text p {
+    line-height: 2rem;
+}
+
+@media screen and (width <=768px) {
+    .service-container {
+        display: initial;
+        // grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+
+    .service-card {
+        position: static;
+        width: 95dvw;
+        margin-inline: auto;
+        transform: translateY(-5%);
+    }
+
+    .card-inner {
+        padding-inline: 10%;
+    }
+
+    .service-img {
+        height: 40vh;
+    }
+}
+
+@media screen and (width > 768px) and (width < 1248px) {
+    .service-container {
+        min-height: 700px;
+    }
+
+    @media screen and (width < 860px) {
+        .service-container {
+            min-height: 800px;
+        }
+
+        .elementor-divider-separator {
+            width: 40px;
+        }
+    }
+
+    .left-card-right-img .service-card {
+        margin-inline-end: 40px;
+    }
+
+    .right-card-left-img .service-card {
+        margin-inline-start: 40px;
+    }
+
+    .elementor-widget-container {
+        width: 20%;
+    }
+
+    .elementor-divider-separator {
+        width: 50px;
+    }
+}
+
+@media screen and (width < 576px) {
+    .elementor-divider-separator {
+        width: 50px;
+    }
+
+    .elementor-widget-container {
+        width: 0;
+    }
+}

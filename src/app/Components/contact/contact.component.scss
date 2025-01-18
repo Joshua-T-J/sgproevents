@@ -1,0 +1,102 @@
+.contact-main {
+    margin-inline: auto;
+    width: 100%;
+    max-width: min(100%, 1140px);
+    margin-block-end: 100px;
+}
+
+.contact-inner {
+    background: var(--clr-white);
+    padding: 50px 100px;
+
+    .cormorant-garamond-bold {
+        font-size: 1.5rem;
+    }
+
+    .form-sub-head {
+        margin: 0;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 0 !important;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: rgb(216, 216, 216);
+        box-shadow: none;
+        background-color: rgba(247, 247, 247, 0.77);
+    }
+
+    input,
+    textarea,
+    select {
+        background-color: rgba(247, 247, 247, 0.77);
+        border-color: rgba(234, 234, 234, 0.7);
+    }
+
+    input[type=number]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    select .select-option {
+        background-color: rgba(247, 247, 247, 0.77) !important;
+        border-color: rgba(234, 234, 234, 0.7) !important;
+    }
+
+    .error-text {
+        color: var(--clr-error);
+        font-size: 14px;
+    }
+}
+
+.contact-details-inner {
+    word-wrap: break-word;
+
+    h4 {
+        font-size: 1.75rem;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 1rem;
+
+        .icon-link {
+            transition: all ease .3s;
+            border: 1px solid transparent;
+
+            .icon-main {
+                transition: all ease .3s;
+                padding: 10px 15px;
+                font-size: 1.2rem;
+                border-radius: 50px;
+                background: var(--background-gradient);
+                box-shadow: var(--shadow);
+            }
+
+            &:hover {
+
+                // border-color: var(--clr-primary);
+                .icon-main {
+                    color: var(--clr-primary);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width <=1200px) {
+    .contact-main {
+        margin-inline: min(10%, 80px);
+        width: auto;
+    }
+
+    @media screen and (width <=992px) {
+        .contact-inner {
+            padding-inline: 10%;
+        }
+    }
+}

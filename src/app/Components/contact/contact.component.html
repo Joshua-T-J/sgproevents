@@ -1,0 +1,113 @@
+<section class="contact page-container-section">
+    <div class="container-fluid">
+        <app-page-hero [title]="title" [description]="description" [className]="'contact-hero'"></app-page-hero>
+        <div class="contact-main">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-details-container">
+                        <div class="contact-details-inner">
+                            <div class="row">
+                                <h4 class="cormorant-garamond-bold">Our Office</h4>
+                                <p>123 Fifth Avenue, New York, NY 10160, USA</p>
+                            </div>
+                            <div class="row mt-5">
+                                <h4 class="cormorant-garamond-bold">Contact us</h4>
+                                <p><i class="bi bi-envelope"></i> <a [href]="'mailto:'+emailId"> {{emailId}}</a></p>
+                                <p><i class="bi bi-phone"></i>
+                                    @for (item of phone; track $index;let l=$last) {
+                                    <a [href]="'tel:'+item">{{item + (!l?' ,':'')}} </a>
+                                    }
+                                </p>
+                            </div>
+                            <div class="row mt-5">
+                                <h4 class="cormorant-garamond-bold">Social Media</h4>
+                                <div class="social-icons">
+                                    @for (item of socialMedia; track item.id) {
+                                    <a [href]="item.link" target="_blank" class="icon-link">
+                                        <div class="icon-main">
+                                            <i [class]="item.icon"></i>
+                                        </div>
+                                    </a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mt-md-0 mt-5">
+                    <div class="contact-form-container">
+                        <div class="contact-inner">
+                            <form class="row g-3" [formGroup]="contactForm" (ngSubmit)="contactFormSubmit()">
+                                <div class="col-md-12">
+                                    <h5 class="cormorant-garamond-bold">Let's Work Together</h5>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <!-- <label for="fristName" class="form-label">First Name</label> -->
+                                    <input type="text" class="form-control" placeholder="First Name" formControlName="FirstName" id="fristName">
+                                    @if (contactFormControls['FirstName'].touched && contactFormControls['FirstName'].errors?.['required']) {
+                                    <span class="error-text">This field is required.</span>
+                                    }
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <label for="lastName" class="form-label">Last Name</label> -->
+                                    <input type="text" class="form-control" placeholder="Last Name" formControlName="LastName" id="lastName">
+                                    @if (contactFormControls['LastName'].touched && contactFormControls['LastName'].errors?.['required']) {
+                                    <span class="error-text">This field is required.</span>
+                                    }
+                                </div>
+                                <div class="col-12">
+                                    <!-- <label for="email" class="form-label">Email</label> -->
+                                    <input type="email" class="form-control" placeholder="Email" formControlName="Email" id="email">
+                                    @if (contactFormControls['Email'].touched && contactFormControls['Email'].errors?.['required']) {
+                                    <span class="error-text">This field is required.</span>
+                                    }
+                                    @if (contactFormControls['Email'].touched && contactFormControls['Email'].errors?.['pattern']) {
+                                    <span class="error-text">Enter a valid email.</span>
+                                    }
+                                </div>
+                                <div class="col-12">
+                                    <!-- <label for="phoneNumber" class="form-label">Phone Number</label> -->
+                                    <input type="number" class="form-control" placeholder="Phone Number" formControlName="PhoneNumber" id="phoneNumber">
+                                    @if (contactFormControls['PhoneNumber'].touched && contactFormControls['PhoneNumber'].errors?.['required']) {
+                                    <span class="error-text">This field is required.</span>
+                                    }
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <p class="form-sub-head montserrat-medium">Referral</p>
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <select formControlName="Referral" id="inputReferral" class="form-select">
+                                        @for (item of Referrals; track item;let f=$first) {
+                                        <option [value]="item">{{item}}</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <p class="form-sub-head montserrat-medium">Service</p>
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <select formControlName="Service" id="inputService" class="form-select">
+                                        @for (item of Services; track item;let f=$first) {
+                                        <option [value]="item">{{item}}</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" [maxlength]="messageMaxLength" [rows]="4" placeholder="Message" formControlName="Message" id="message" rows="3"></textarea>
+                                    <label for="message" class="form-label mt-1 float-end"><small>{{messageLength()}}/{{messageMaxLength}}</small></label>
+                                    @if (contactFormControls['Message'].touched && contactFormControls['Message'].errors?.['required']) {
+                                    <span class="error-text">This field is required.</span>
+                                    }
+                                </div>
+                                <div class="col-12 mt-0">
+                                    <button type="submit" class="book-now-btn mt-0 light-bg">Submit <i class="bi bi-send"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

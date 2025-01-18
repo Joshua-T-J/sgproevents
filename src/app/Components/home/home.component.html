@@ -1,0 +1,47 @@
+<section class="home">
+    <div class=".home-image-slider">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                @for (item of Images; track item.Id;let i = $index;let first = $first) {
+                <button type="button" class="carousel-slide-btn" data-bs-target="#carouselExampleCaptions"
+                    [attr.data-bs-slide-to]="i" [ngClass]="{'active': first}" aria-current="true"
+                    [attr.aria-label]="item.ImageAltText"></button>
+                }
+            </div>
+            <div class="carousel-inner">
+                @for (image of Images; track image.Id;let first = $first) {
+                <div class="carousel-item active" data-bs-interval="4000" [ngClass]="{'active': first}">
+                    <img [src]="image.ImageUrl" class="d-block w-100" [alt]="image.ImageAltText">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>{{image.ImageTitle}}</h5>
+                        <p>{{image.ImageDescription}}</p>
+                    </div>
+                </div>
+                }
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+        </div>
+    </div>
+    <div class="carousel-text-area">
+        <div class="text-area-inner">
+            <p>Welcome to</p>
+            <h2 class="cormorant-garamond-medium">SG Pro Events</h2>
+            <h5 class="montserrat-light">Focus <span>on</span> Trends</h5>
+            <p class="mt-4 home-description cormorant-garamond-regular-italic">Discover the magic of exceptional events
+                with SG Pro
+                Events. <br>
+                From conception to execution, we specialize in creating unforgettable experiences <br>
+                that leave a lasting impression.</p>
+            <button class="book-now-btn primary-light-bg">Book Now <i class="bi bi-arrow-right"></i> </button>
+        </div>
+    </div>
+</section>

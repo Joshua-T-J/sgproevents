@@ -1,0 +1,22 @@
+<section class="services">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="cormorant-garamond-bold text-center section-header">Services</h4>
+            </div>
+            @for (item of services; track item.id) {
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="service-card">
+                    <div class="card-img-container">
+                        <img [src]="item.imageUrl" [alt]="item.title" />
+                    </div>
+                    <div class="card-text">
+                        <h6 class="cormorant-garamond-semibold text-center sub-h6">{{ item.title }}</h6>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

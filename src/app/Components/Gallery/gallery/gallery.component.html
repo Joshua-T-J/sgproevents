@@ -1,0 +1,41 @@
+<section class="gallery page-container-section">
+    <div class="container-fluid">
+        <app-page-hero [title]="title" [description]="description" [className]="'gallery-hero'"></app-page-hero>
+        @if (Images.length>0) {
+        <!-- <gallery [id]="galleryId" gallerize>
+                @for (item of Images; track $index; let i = $index) {
+                <div class="gallery-item" [lightbox]="i" id="gallery-{{i}}">
+                    <img [src]="item.data?.thumb" />
+                </div>
+                }
+            </gallery> -->
+        <div class="lightbox-gallery">
+            @for (item of Images; track $index; let i = $index) {
+            <div class="gallery-image-container"
+                [lightbox]="i"
+                id="gallery-{{i}}"
+                [gallery]="galleryId">
+                <img [src]="item.data?.thumb " />
+            </div>
+            }
+        </div>
+        }
+    </div>
+</section>
+
+<!-- <section class="services">
+    <div class="container-fluid">
+        <div class="row">
+            <h4 class="cormorant-garamond-bold text-center section-header">Gallery</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of Images; let i = index">
+                <div class="lightbox-gallery" (click)="openLightbox(i)">
+                    <div class="image-thumbnail" id="gallery-{{ i }}">
+                        <img [src]="item.data?.thumb" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

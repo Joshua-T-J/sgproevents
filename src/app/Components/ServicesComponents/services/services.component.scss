@@ -1,0 +1,44 @@
+.service-card {
+    .card-img-container {
+        max-width: 450px;
+        overflow: hidden;
+        text-align: center;
+        margin-inline: auto;
+        display: block;
+    }
+
+    .card-text {
+        display: block;
+        margin-inline: auto;
+
+        h6,
+        p {
+            padding-inline: 2rem;
+        }
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+        padding-inline: 2rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    p {
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (width>=768px) and (width<992px) {
+    .service-card {
+        .sub-h6 {
+            font-size: 1.37rem;
+        }
+
+        p {
+            line-height: 1.8rem;
+        }
+    }
+}
