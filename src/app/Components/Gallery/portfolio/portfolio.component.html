@@ -1,5 +1,36 @@
 <section class="about">
     <div class="container-fluid">
-        <div class="row"></div>
+        <div class="portfolio-container">
+            @if (Images.length>0) {
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @for (group of slides; track $index;let f=$first;let groupIndex=$index) {
+                    <div class="carousel-item" [ngClass]="{'active': f}">
+                        <div class="d-flex">
+                            @for (item of Images | slice: group * cardPerPage - cardPerPage: group * cardPerPage; track $index; let i = $index) {
+                            @let index = groupIndex * cardPerPage + i;
+                            <div class="slide"
+                                [lightbox]="index"
+                                id="gallery-{{index}}"
+                                [gallery]="galleryId">
+                                <img [src]="item.data?.thumb " />
+                            </div>
+                            }
+                        </div>
+                    </div>
+                    }
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
     </div>
 </section>

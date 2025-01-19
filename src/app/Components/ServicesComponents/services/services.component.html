@@ -10,9 +10,16 @@
                     <div class="card-img-container">
                         <img [src]="item.imageUrl" [alt]="item.title" />
                     </div>
-                    <div class="card-text">
-                        <h6 class="cormorant-garamond-semibold text-center sub-h6">{{ item.title }}</h6>
-                        <p>{{item.description}}</p>
+                    <div class="card-text-main">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-divider">
+                                <span class="elementor-divider-separator"> </span>
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <h6 class="cormorant-garamond-semibold sub-h6">{{ item.title }}</h6>
+                            <p>{{item.description}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
