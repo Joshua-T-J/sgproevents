@@ -30,7 +30,6 @@ export class GalleryComponent implements OnInit {
     this.Images = data.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-    console.log('Images array:', this.Images);
 
     // Load Images into gallery
     const galleryRef = this.gallery.ref(this.galleryId);

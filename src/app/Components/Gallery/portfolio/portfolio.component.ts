@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NgClass, SlicePipe } from '@angular/common';
-import { Component, ElementRef, OnInit, viewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   Gallery,
   GalleryItem,
@@ -20,9 +20,7 @@ import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
 export class PortfolioComponent implements OnInit {
   galleryId = 'myLightbox';
   Images: GalleryItem[] = [];
-
   imageData = data;
-  slider = viewChild.required<ElementRef>('slider');
   cardPerPage: number = 4;
   noofSlides: number = 0;
   slides: number[] = [];
@@ -60,14 +58,6 @@ export class PortfolioComponent implements OnInit {
         this.noofSlides = Math.ceil(this.Images.length / this.cardPerPage) || 0;
         this.populateSlides();
       });
-  }
-
-  openLightbox(index: number) {
-    this.lightbox.open(index, this.galleryId, {
-      panelClass: 'fullscreen',
-      hasBackdrop: false,
-      backdropClass: 'dark-backdrop',
-    });
   }
 
   populateSlides() {
