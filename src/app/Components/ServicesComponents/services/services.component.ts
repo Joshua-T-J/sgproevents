@@ -11,21 +11,21 @@ export class ServicesComponent {
   services: Service[] = [
     {
       id: 1,
-      title: 'Photography',
+      title: 'ByeBerry Weddings',
       description:
         'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       imageUrl: '/Images/photography.jpg',
     },
     {
       id: 2,
-      title: 'Live Streaming',
+      title: 'SG Live Media',
       description:
         'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       imageUrl: '/Images/streaming.jpg',
     },
     {
       id: 3,
-      title: 'Stage Decoration',
+      title: 'SG Events',
       description:
         'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       imageUrl: '/Images/stage.JPG',

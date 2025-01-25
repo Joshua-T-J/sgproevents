@@ -18,9 +18,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto nav-sg">
             <li class="nav-item ms-auto nav-btns">
+              <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">HOME</a>
+            </li>
+            <!-- <li class="nav-item ms-auto nav-btns">
               <a class="nav-link" routerLink=""
                 [class.active]="(activeFragment|async)==='home' || !(activeFragment|async)" fragment="home">HOME</a>
-            </li>
+            </li> -->
             <li class="nav-item ms-auto nav-btns">
               <a class="nav-link" routerLink="about" routerLinkActive="active">ABOUT</a>
             </li>
