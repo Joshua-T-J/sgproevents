@@ -716,3 +716,33 @@ footer {
 }
 
 /********************** footer End **********************/
+.up-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-small);
+    cursor: pointer;
+    background-image: conic-gradient(var(--clr-primary) 0%,
+            var(--clr-primary) var(--scroll),
+            var(--bg-body) var(--scroll),
+            var(--bg-body));
+    background-repeat: no-repeat;
+    display: none;
+}
+
+#progress-value {
+    text-decoration: none;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    background: var(--bg-body);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    color: var(--font-color);
+}
