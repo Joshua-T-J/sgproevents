@@ -6,11 +6,10 @@ import { IServices } from '../../../Shared/models/model';
 import { SERVICES } from '../../../Shared/models/data';
 
 @Component({
-  selector: 'app-all-services',
-  standalone: true,
-  imports: [NgClass, PageHeroComponent, RouterLink],
-  templateUrl: './all-services.component.html',
-  styleUrl: './all-services.component.scss',
+    selector: 'app-all-services',
+    imports: [NgClass, PageHeroComponent, RouterLink],
+    templateUrl: './all-services.component.html',
+    styleUrl: './all-services.component.scss'
 })
 export class AllServicesComponent {
   title = 'Services';

@@ -13,11 +13,10 @@ import { SOCIAL_LINKS, EMAIL_ID, PHONE_NUMBER } from '../../Shared/models/data';
 import { CommonService } from '../../Services/common.service';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [PageHeroComponent, ReactiveFormsModule],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+    selector: 'app-contact',
+    imports: [PageHeroComponent, ReactiveFormsModule],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit, OnDestroy {
   title = 'Contact Us';

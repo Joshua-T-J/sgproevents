@@ -1,8 +1,7 @@
+@use 'fonts' as *;
+@use 'variables' as *;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url(variables.scss);
-@import url(fonts.scss);
-@import 'variables';
 
 .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;

@@ -11,11 +11,10 @@ import {
 import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
 
 @Component({
-  selector: 'app-portfolio',
-  standalone: true,
-  imports: [LightboxModule, SlicePipe, NgClass],
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss',
+    selector: 'app-portfolio',
+    imports: [LightboxModule, SlicePipe, NgClass],
+    templateUrl: './portfolio.component.html',
+    styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent implements OnInit {
   galleryId = 'myLightbox';

@@ -3,11 +3,10 @@ import { AfterContentInit, Component, input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-page-hero',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './page-hero.component.html',
-  styleUrl: './page-hero.component.scss',
+    selector: 'app-page-hero',
+    imports: [NgClass],
+    templateUrl: './page-hero.component.html',
+    styleUrl: './page-hero.component.scss'
 })
 export class PageHeroComponent implements AfterContentInit {
   title = input.required<string>();
