@@ -1,4 +1,4 @@
-import { IServices, SocialMedia } from './model';
+import { IServices, SocialMedia } from '../models/model';
 
 export const SOCIAL_LINKS: SocialMedia[] = [
   {

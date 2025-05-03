@@ -1,6 +1,28 @@
 <section class="portfolio">
     <div class="container-fluid">
         <div class="portfolio-container">
+            @if (Images && Images.length >0) {
+            <div class="card">
+                <p-carousel [value]="Images" [numVisible]="4" [numScroll]="2" [circular]="true" [autoplayInterval]="3000"
+                    [responsiveOptions]="responsiveOptions">
+                    <ng-template let-image #item>
+                        <div class="">
+                            <div class="relative" [lightbox]="image.data?.args"
+                                id="gallery-{{image.data?.args}}"
+                                [gallery]="galleryId">
+                                <img [src]="image.data?.thumb" />
+                            </div>
+                        </div>
+                    </ng-template>
+                </p-carousel>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- <section class="portfolio">
+    <div class="container-fluid">
+        <div class="portfolio-container">
             @if (Images.length>0) {
             <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -33,4 +55,4 @@
             }
         </div>
     </div>
-</section>
+</section> -->

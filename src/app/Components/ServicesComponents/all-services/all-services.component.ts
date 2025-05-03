@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { PageHeroComponent } from '../../../Shared/page-hero/page-hero.component';
 import { RouterLink } from '@angular/router';
 import { IServices } from '../../../Shared/models/model';
-import { SERVICES } from '../../../Shared/models/data';
+import { SERVICES } from '../../../Shared/utilities/data';
 
 @Component({
-    selector: 'app-all-services',
-    imports: [NgClass, PageHeroComponent, RouterLink],
-    templateUrl: './all-services.component.html',
-    styleUrl: './all-services.component.scss'
+  selector: 'app-all-services',
+  imports: [NgClass, PageHeroComponent, RouterLink],
+  templateUrl: './all-services.component.html',
+  styleUrl: './all-services.component.scss',
 })
 export class AllServicesComponent {
   title = 'Services';

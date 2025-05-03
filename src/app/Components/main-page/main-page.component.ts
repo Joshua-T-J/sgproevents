@@ -6,14 +6,14 @@ import { ServicesComponent } from '../ServicesComponents/services/services.compo
 import { AboutUsComponent } from '../About/about-us/about-us.component';
 
 @Component({
-    selector: 'app-main-page',
-    imports: [
+  selector: 'app-main-page',
+  imports: [
     HomeComponent,
     PortfolioComponent,
     AboutUsComponent,
-    ServicesComponent
-],
-    templateUrl: './main-page.component.html',
-    styleUrl: './main-page.component.scss'
+    ServicesComponent,
+  ],
+  templateUrl: './main-page.component.html',
+  styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent {}

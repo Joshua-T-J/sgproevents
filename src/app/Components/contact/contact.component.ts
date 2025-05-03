@@ -9,14 +9,18 @@ import {
 import { map, Observable, Subscription } from 'rxjs';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { SocialMedia } from '../../Shared/models/model';
-import { SOCIAL_LINKS, EMAIL_ID, PHONE_NUMBER } from '../../Shared/models/data';
+import {
+  SOCIAL_LINKS,
+  EMAIL_ID,
+  PHONE_NUMBER,
+} from '../../Shared/utilities/data';
 import { CommonService } from '../../Services/common.service';
 
 @Component({
-    selector: 'app-contact',
-    imports: [PageHeroComponent, ReactiveFormsModule],
-    templateUrl: './contact.component.html',
-    styleUrl: './contact.component.scss'
+  selector: 'app-contact',
+  imports: [PageHeroComponent, ReactiveFormsModule],
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit, OnDestroy {
   title = 'Contact Us';
