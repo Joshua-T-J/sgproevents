@@ -1,9 +1,9 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { PageHeroComponent } from '../../../Shared/page-hero/page-hero.component';
 import { RouterLink } from '@angular/router';
 import { IServices } from '../../../Shared/models/model';
 import { SERVICES } from '../../../Shared/utilities/data';
+import { PageHeroComponent } from '../../../Shared/components/page-hero/page-hero.component';
 
 @Component({
   selector: 'app-all-services',

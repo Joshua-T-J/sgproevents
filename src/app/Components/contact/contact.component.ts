@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
-import { PageHeroComponent } from '../../Shared/page-hero/page-hero.component';
 import {
   FormBuilder,
   FormGroup,
@@ -15,6 +14,7 @@ import {
   PHONE_NUMBER,
 } from '../../Shared/utilities/data';
 import { CommonService } from '../../Services/common.service';
+import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
 
 @Component({
   selector: 'app-contact',

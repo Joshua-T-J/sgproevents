@@ -1,5 +1,5 @@
 :root {
-  --bg-body: #f4f0ed;
+  --bg-body: rgb(244, 240, 237);
   --bg-body-800: rgba(236, 244, 255, 0.808);
   --carosel-txt-area-bg: #ffe8e59a;
   --background-gradient: linear-gradient(145deg, #dcdcdc, #ffffff);
@@ -10,13 +10,20 @@
   --font-color-300: #393e3f;
   --font-color-700: #161616;
   --clr-white: #fff;
+  --clr-off-white: #F4F0ED;
+  --clr-light-grey: #F2F3F0;
+  --clr-grey: #e9e9e9;
   --shadow-small: 2px 2px 10px #cfcfcf, -2px -2px 10px #ffffff;
   --popup-outer-bg: rgba(0, 0, 0, 0.541);
   --cards-hover-bg: linear-gradient(145deg, #dce5eb, #f0f0f0);
-  --clr-primary: #a02829;
-  --clr-primary-medium: #ed143d;
-  --clr-primary-light: #b43c3c;
-  --clr-footer: #f8eae8;
+  --clr-primary-sg: #a02829;
+  --clr-primary-medium-sg: #ed143d;
+  --clr-primary-light-sg: #b43c3c;
+  --clr-primary: rgb(117, 123, 102);
+  --clr-primary-medium: rgb(132, 132, 124);
+  --clr-primary-light: rgb(158, 160, 150);
+  --clr-primary-dark: #4D504A;
+  --clr-footer: rgb(244, 240, 237);
   --clr-error: #e9744b;
   --clr-success: #198754;
   --clr-border-dark: #d9dee2;
@@ -27,8 +34,8 @@
     inset 6px -6px 12px #ffffff;
   --shadow-inwards-small-body: inset -2px 2px 10px #cfcfcf,
     inset 2px -2px 10px #ffffff;
-  --shadow-in-small-primary-light: inset -2px 2px 10px #d29f9f,
-    inset 2px -2px 10px #ffd7d7;
+  --shadow-in-small-primary-light: inset -2px 2px 10px #707069,
+    inset 2px -2px 10px #98988f;
 }
 
 [data-theme="dark"] {

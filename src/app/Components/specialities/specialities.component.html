@@ -1,0 +1,48 @@
+<section class="specialities sp-parellax">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="parellax-content">
+                    <div class="parellax-section-title-holder">
+                        <div class="parellax-st-inner">
+                            <h1 class="cormorant-garamond-regular">
+                                You just enjoy your day! </h1>
+                            <p class="parellax-st-subtitle cormorant-garamond-regular-italic">
+
+                                Lorem ipsum dolor sit amet, adipiscing elit. Aenean commodo ligula.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="parellax-btn-holder">
+                        <a routerLink="about" fragment="About"><button class="book-now-btn transparent-bg">Read More </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sp-icons-container">
+    <div class="sp-container-inner">
+        <div class="row mx-2">
+            @for (item of specialities; track item.id) {
+            <div class="col-md-3 col-sm-6">
+                <div class="sp_column-inner pt-3">
+                    <div class="sp_wrapper">
+                        <div class="sp-iwt-icon">
+                            <img loading="lazy" decoding="async" width="64" height="71" [src]="item.image" class="attachment-full size-full" alt="d">
+                        </div>
+                        <div class="sp-iwt-content mt-4">
+                            <h3 class="cormorant-garamond-regular sp-iwt-title" style="color: #ffffff">
+                                {{item.title}}
+                            </h3>
+                            <span class="sp-iwt-subtitle cormorant-garamond-regular-italic" style="color: #ffffff">{{item.subtitle }}</span>
+                            <p class="sp-iwt-text" style="color: #ffffff">{{item.description}}</p>
+                        </div>
+                    </div>
+                    <div class="vc_empty_space" style="height: 52px"><span class="vc_empty_space_inner"></span></div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

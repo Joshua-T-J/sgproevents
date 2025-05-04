@@ -7,7 +7,7 @@
       </a>
     </div>
 
-    <div class="col-md-10 col-6 my-auto top-bar">
+    <div class="col my-auto top-bar">
       <nav class="navbar navbar-expand-lg navbar-portfolio">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
@@ -52,20 +52,29 @@
               <a class="nav-link" routerLink="" [class.active]="(activeFragment|async)==='contact'"
                 fragment="contact">CONTACT</a>
             </li> -->
-            <li class="nav-item ms-auto nav-btns">
+            <!-- <li class="nav-item ms-auto nav-btns">
               <a class="nav-link" [routerLink]="currentRoute" [class.active]="(activeFragment|async)==='footer'"
                 fragment="footer">FOLLOW</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
     </div>
+    <div class="d-none d-lg-block col-2">
+      <ul class="navbar-nav mx-auto nav-sg">
+        <li class="nav-item ms-auto nav-btns">
+          <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling">FOLLOW</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
-
 <main>
   <router-outlet />
 </main>
+
+
 
 <div id="footer">
   <app-footer></app-footer>
@@ -74,3 +83,4 @@
 <div class="up-arrow" title="Go To Top" id="goto-top" (click)="scrollToTop()" matTooltip="Go to Top">
   <a id="progress-value"><i class="bi bi-arrow-up"></i> </a>
 </div>
+<app-offcanvas></app-offcanvas>

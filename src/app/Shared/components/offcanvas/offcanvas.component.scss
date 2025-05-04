@@ -1,0 +1,64 @@
+.offcanvas {
+    background: var(--clr-primary-dark);
+    border-left: none;
+    color: var(--font-color-white);
+    overflow-x: hidden;
+}
+
+.offcanvas-header .sb-label {
+    text-transform: uppercase;
+}
+
+.offcanvas-body {
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+    display: none;
+}
+
+.offcanvas-body {
+    font-size: 15px;
+    color: #afafa5;
+
+    .widget-side {
+        margin: 0;
+    }
+
+    .widget_media_image,
+    .widget_text,
+    .custom-font-widget {
+        text-align: center;
+    }
+
+    .widget_media_image img {
+        width: 125px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .social-platform-font {
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 300;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #ffffff;
+        margin: 0 0 0 0;
+    }
+
+    .social-id-font {
+        font-size: 21px;
+        line-height: 1.772727272727273em;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: 0px;
+        text-transform: capitalize;
+        text-align: center;
+        color: #afafa5;
+        margin: 0 0 0px 0;
+    }
+}

@@ -9,18 +9,19 @@ import {
 } from '@angular/router';
 import { share } from 'rxjs';
 import { FooterComponent } from './Components/footer/footer.component';
+import { OffcanvasComponent } from './Shared/components/offcanvas/offcanvas.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [
-        RouterOutlet,
-        RouterLink,
-        AsyncPipe,
-        RouterLinkActive,
-        FooterComponent,
-    ],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    FooterComponent,
+    OffcanvasComponent,
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'SGProEvents';

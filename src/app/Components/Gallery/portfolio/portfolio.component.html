@@ -3,11 +3,13 @@
         <div class="portfolio-container">
             @if (Images && Images.length >0) {
             <div class="card">
-                <p-carousel [value]="Images" [numVisible]="4" [numScroll]="2" [circular]="true" [autoplayInterval]="3000"
+                <!-- autoplayInterval="4000" -->
+                <p-carousel [value]="Images" [numVisible]="4" [numScroll]="2" [circular]="true"
                     [responsiveOptions]="responsiveOptions">
                     <ng-template let-image #item>
-                        <div class="">
-                            <div class="relative" [lightbox]="image.data?.args"
+                        <div class="image-container">
+                            <div class="image-overlay-wrapper"></div>
+                            <div class="relative image-item" [lightbox]="image.data?.args"
                                 id="gallery-{{image.data?.args}}"
                                 [gallery]="galleryId">
                                 <img [src]="image.data?.thumb" />

@@ -4,6 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { PortfolioComponent } from '../Gallery/portfolio/portfolio.component';
 import { ServicesComponent } from '../ServicesComponents/services/services.component';
 import { AboutUsComponent } from '../About/about-us/about-us.component';
+import { SpecialitiesComponent } from '../specialities/specialities.component';
 
 @Component({
   selector: 'app-main-page',
@@ -12,6 +13,7 @@ import { AboutUsComponent } from '../About/about-us/about-us.component';
     PortfolioComponent,
     AboutUsComponent,
     ServicesComponent,
+    SpecialitiesComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',

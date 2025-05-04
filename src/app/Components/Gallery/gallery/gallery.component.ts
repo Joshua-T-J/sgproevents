@@ -7,13 +7,13 @@ import {
   ThumbnailsPosition,
 } from 'ng-gallery';
 import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
-import { PageHeroComponent } from '../../../Shared/page-hero/page-hero.component';
+import { PageHeroComponent } from '../../../Shared/components/page-hero/page-hero.component';
 
 @Component({
-    selector: 'app-gallery',
-    imports: [LightboxModule, PageHeroComponent],
-    templateUrl: './gallery.component.html',
-    styleUrls: ['./gallery.component.scss']
+  selector: 'app-gallery',
+  imports: [LightboxModule, PageHeroComponent],
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
   galleryId = 'myLightbox';

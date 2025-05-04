@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { PageHeroComponent } from '../../../Shared/page-hero/page-hero.component';
+import { PageHeroComponent } from '../../../Shared/components/page-hero/page-hero.component';
 
 @Component({
-    selector: 'app-about',
-    imports: [PageHeroComponent],
-    templateUrl: './about.component.html',
-    styleUrl: './about.component.scss'
+  selector: 'app-about',
+  imports: [PageHeroComponent],
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss',
 })
 export class AboutComponent {
   title = 'About';
