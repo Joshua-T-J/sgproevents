@@ -96,8 +96,8 @@ header {
     color: var(--font-color-white);
     // color: var(--font-color-300);
     font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
-    font-size: 16px;
+    // font-weight: 700;
+    font-size: 14px;
     font-style: normal;
     padding-inline: 15px;
     background: none;
@@ -145,6 +145,12 @@ header {
 
 .navbar-toggler {
     border: 1px solid var(--font-color-white);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .top {
