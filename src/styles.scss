@@ -714,9 +714,21 @@ footer {
 .footer h6 {
     font-size: 1.2rem;
     color: var(--clr-primary-light);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: start;
     padding: 0px;
     font-weight: 500;
+}
+
+.footer-list ul li,
+.footer-list ul li a,
+.footer-list p {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.1rem;
 }
 
 .footer ul {

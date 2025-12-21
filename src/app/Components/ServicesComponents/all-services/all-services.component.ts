@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { IServices } from '../../../Shared/models/model';
 import { SERVICES } from '../../../Shared/utilities/data';
 import { PageHeroComponent } from '../../../Shared/components/page-hero/page-hero.component';
+import { unicodeToBase64 } from '../../../Shared/utilities/utils';
 
 @Component({
   selector: 'app-all-services',
@@ -20,4 +21,6 @@ export class AllServicesComponent {
                 wedding choirs add an extra layer of magic.
                 Explore our services and let us make your special moments truly extraordinary.`;
   services: IServices[] = SERVICES;
+
+  unicodeToBase64 = unicodeToBase64;
 }

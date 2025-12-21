@@ -15,6 +15,7 @@ import {
 } from '../../Shared/utilities/data';
 import { CommonService } from '../../Services/common.service';
 import { PageHeroComponent } from '../../Shared/components/page-hero/page-hero.component';
+import { base64ToUnicode } from '../../Shared/utilities/utils';
 
 @Component({
   selector: 'app-contact',
@@ -100,7 +101,10 @@ export class ContactComponent implements OnInit, OnDestroy {
     );
     let queryParam = 'ByeBerry Weddings';
     this.service$.subscribe((param) => (queryParam = param));
-    if (queryParam) this.contactForm?.get('Service')?.setValue(queryParam);
+    if (queryParam) {
+      let serviceDecoded = base64ToUnicode(queryParam);
+      this.contactForm?.get('Service')?.setValue(serviceDecoded);
+    }
   }
 
   get contactFormControls() {

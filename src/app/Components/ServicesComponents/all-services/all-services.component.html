@@ -18,7 +18,7 @@
                         <div class="card-text">
                             <p class="montserrat-regular">{{ item.description }}</p>
                         </div>
-                        <a routerLink="/contact" [queryParams]="{service:item.title}">
+                        <a routerLink="/contact" [queryParams]="{service:unicodeToBase64(item.title)}">
                             <button class="book-now-btn light-bg">
                                 Book Now <i class="bi bi-arrow-right"></i>
                             </button>
