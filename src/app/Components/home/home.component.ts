@@ -16,7 +16,7 @@ export class HomeComponent {
       ImageUrl:
         'https://solene.qodeinteractive.com/wp-content/uploads/2020/01/h1-slider-img-1.jpg',
       ImageAltText: 'Carousel Image 1',
-      ImageTitle: 'First slide label',
+      ImageTitle: 'Made with Love',
       ImageDescription:
         'Nulla vitae elit libero, a pharetra augue mollis interdum.',
     },
@@ -26,7 +26,7 @@ export class HomeComponent {
       ImageUrl:
         'https://solene.qodeinteractive.com/wp-content/uploads/2019/12/h1-slider-img-3.new_.jpg',
       ImageAltText: 'Carousel Image 2',
-      ImageTitle: 'First slide label',
+      ImageTitle: 'Made for You',
       ImageDescription:
         'Nulla vitae elit libero, a pharetra augue mollis interdum.',
     },
@@ -36,7 +36,7 @@ export class HomeComponent {
       ImageUrl:
         'https://solene.qodeinteractive.com/wp-content/uploads/2019/11/h1-slider-img-2.jpg',
       ImageAltText: 'Carousel Image 3',
-      ImageTitle: 'First slide label',
+      ImageTitle: 'Made to shine',
       ImageDescription:
         'Nulla vitae elit libero, a pharetra augue mollis interdum.',
     },

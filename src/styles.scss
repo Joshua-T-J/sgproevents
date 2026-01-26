@@ -71,7 +71,7 @@ header {
     color: var(--font-color-white);
     transition: all 0.3s ease;
     background-color: var(--bg-body);
-    background: rgba(55, 55, 55, 0.25);
+    background: rgba(55, 55, 55, 0.05);
     // box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
@@ -104,7 +104,7 @@ header {
 .nav-sg li {
     // font-weight: 6500;
     font-size: 0.9rem;
-    margin: 10px 5px;
+    margin: 10px 10px;
 }
 
 .nav-sg li a {
@@ -212,6 +212,38 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.carousel-caption {
+    inset: 50% 50%;
+    width: 100%;
+    transform: translate(-50%, -30%);
+
+    .book-now-btn {
+        color: var(--clr-off-white);
+        opacity: 1;
+        padding-inline: 45px;
+    }
+
+    .book-now-btn::before {
+        border: 1px solid var(--clr-off-white);
+    }
+}
+
+.carousel-header-text {
+    font-size: 4.5rem;
+    color: var(--clr-off-white);
+    letter-spacing: 1.2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.carousel-sub-text {
+    font-size: 1.5rem;
+    color: var(--clr-off-white);
+    line-height: 1.2;
+    margin-top: 1%;
+    text-transform: capitalize;
 }
 
 .carousel-item img {
@@ -671,6 +703,28 @@ header {
 
 lightbox gallery {
     background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.sg-content-bottom {
+    margin: 150px auto 60px;
+    text-align: center;
+}
+
+.sg-custom-font-widget h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--font-color-300);
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 1.3em;
+    letter-spacing: .2em;
+}
+
+.sg-custom-font-widget h3 {
+    margin-bottom: 1rem;
+    font-size: 22px;
+    line-height: 1.5em;
+    color: var(--clr-primary-medium);
 }
 
 /******************************************** Footer Start ********************************************/

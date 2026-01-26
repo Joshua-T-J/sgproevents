@@ -1,5 +1,5 @@
 <section class="home">
-    <div class=".home-image-slider">
+    <div class="home-image-slider">
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <!-- <div class="carousel-indicators">
                 @for (item of Images; track item.Id;let i = $index;let first = $first) {
@@ -14,8 +14,11 @@
                 <div class="carousel-item" data-bs-interval="4000" [class.active]="first">
                     <img [ngSrc]="image.ImageUrl" width="100" height="100" class="d-block w-100" [alt]="image.ImageAltText">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>{{image.ImageTitle}}</h5>
-                        <p>{{image.ImageDescription}}</p>
+                        <h1 class="carousel-header-text cormorant-garamond-regular">{{image.ImageTitle}}</h1>
+                        <p class="carousel-sub-text cormorant-garamond-regular-italic">{{image.ImageDescription}}</p>
+                        <div class="carousel-btn-holder">
+                            <a routerLink="about" fragment="About"><button class="book-now-btn transparent-bg">Read More </button></a>
+                        </div>
                     </div>
                 </div>
                 }
