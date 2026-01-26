@@ -3,7 +3,7 @@
         <app-page-hero [title]="title" [description]="description" [className]="'services-hero'"></app-page-hero>
         <div class="service-details-section">
             @for (item of services; track item.id; let i = $index; let even = $even) {
-            <div class="service-container" [ngClass]="{'left-card-right-img': even, 'right-card-left-img': !even}">
+            <div class="service-container" [class]="{'left-card-right-img': even, 'right-card-left-img': !even}">
                 <div class="service-img" [style.backgroundImage]="'url(' + item.image + ')'"></div>
                 <div class="service-card">
                     <div class="elementor-widget-container">

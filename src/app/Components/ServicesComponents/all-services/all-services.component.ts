@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IServices } from '../../../Shared/models/model';
@@ -8,7 +8,7 @@ import { unicodeToBase64 } from '../../../Shared/utilities/utils';
 
 @Component({
   selector: 'app-all-services',
-  imports: [NgClass, PageHeroComponent, RouterLink],
+  imports: [PageHeroComponent, RouterLink],
   templateUrl: './all-services.component.html',
   styleUrl: './all-services.component.scss',
 })
